@@ -21,6 +21,8 @@ class Model
                  $hash = md5($_POST['password']);
 				if($hash == $password)
 				{
+				      session_start();
+                                      ob_start();
 	                              $_SESSION["login"] = "1";
                                       $_SESSION["username"] = $username;
 					return 'login';
